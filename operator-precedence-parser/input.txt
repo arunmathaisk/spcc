@@ -1,0 +1,26 @@
+Compile and run the program.
+
+i+(i*i   ---> this will not show accepted 
+i+(i*i)  ---> this will show accepted 
+
+
+Enter the string
+i+(i*i)
+
+STACK   INPUT   ACTION
+$i      +(i*i)$ Shift
+$E      +(i*i)$ Reduced: E->i
+$E+     (i*i)$  Shift
+$E+(    i*i)$   Shift
+$E+(i   *i)$    Shift
+$E+(E   *i)$    Reduced: E->i
+$E+(E*  i)$     Shift
+$E+(E*i )$      Shift
+$E+(E*E )$      Reduced: E->i
+$E+(E   )$      Reduced: E->E*E
+$E+(E)  $       Shift
+$E+E    $       Reduced: E->)E(
+$E      $       Reduced: E->E+E
+$E$             Shift
+$E$             Shift
+Accepted;
