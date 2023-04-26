@@ -1,0 +1,14 @@
+The grammar is inside the source code
+
+GRAMMAR is -
+E->2E2 
+E->3E3 
+E->4
+
+Enter a string: 232
+
+stack    input   action
+$       232$    SHIFT
+$2       32$    SHIFT
+$23       2$    SHIFT
+$232       $    Reject
