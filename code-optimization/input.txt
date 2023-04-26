@@ -1,0 +1,11 @@
+Enter the Number of Values:5
+left: a
+right: 9
+left: b
+right: c+d
+left: e
+right: c+d
+left: f
+right: b+e
+left: r
+right: :f
