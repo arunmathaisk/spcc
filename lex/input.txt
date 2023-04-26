@@ -1,0 +1,7 @@
+/*output:
+$ lex test.l
+$ gcc lex.yy.c -ll
+$ ./a.out
+hello
+
+helloHello World */

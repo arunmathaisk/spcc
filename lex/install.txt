@@ -1,0 +1,5 @@
+To install Lex package:
+Type the exact command (either of the two)
+
+sudo apt-get install flex
+sudo apt-get install flex-old

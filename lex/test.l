@@ -1,0 +1,16 @@
+%{
+ #include<stdio.h>
+%}
+LETTER[a-z][A-Z]
+DIGIT[0-9]
+%%
+[\n] {printf("\tHello World\n");}
+begin { printf("Recognized Keyword: %s\n", yytext);}
+if {printf("Recognised Keyword: %s\n", yytext);}
+{LETTER}({LETTER}|{DIGIT})* {printf("Recognized ID: %s\n",yytext);}
+%%
+
+int main()
+{
+yylex();
+}
