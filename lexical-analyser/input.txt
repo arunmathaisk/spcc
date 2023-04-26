@@ -1,0 +1,12 @@
+Make sure you have a file called code.txt 
+
+Example Code :
+
+void main
+{
+int a, b;
+a = b;
+}
+
+Compile and run 
+

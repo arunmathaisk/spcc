@@ -4,6 +4,15 @@ Mac1.dat
 Mac2.dat
 
 
+or if some idk issue try this
+
+no.of macros=2
+enter the text filename 
+Mac1.txt
+Mac2.txt
+
+
+
 Before compiling the program ( macro.c) make a text file named macin.text
 
 
