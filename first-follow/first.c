@@ -1,36 +1,33 @@
 #include <stdio.h>
 #include <ctype.h>
-int FIRST(char[], char);
+void FIRST(char[], char);
 void addToResultSet(char[], char);
-int
-    numOfProductions;
-char
-    productionSet[10][10];
-int main()
+int numOfProductions;
+char productionSet[10][10];
+main()
 {
     int i;
     char choice;
     char c;
     char result[20];
     printf("How many number of productions ? :");
-    scanf("%d", &numOfProductions);
-    for (i = 0; i < numOfProductions; i++)
-    // read production string eg: E=E+T
+    scanf(" %d", &numOfProductions);
+    for (i = 0; i < numOfProductions; i++) // read production string eg: E=E+T
     {
-        printf("Enter productions Number(epsilon=$) %d : ", i + 1);
+        printf("Enter productions Number %d : ", i + 1);
         scanf(" %s", productionSet[i]);
     }
     do
     {
-        printf("\nFind the FIRST of :");
+        printf("\n Find the FIRST of  :");
         scanf(" %c", &c);
         FIRST(result, c); // Compute FIRST; Get Answer in 'result' array
-        printf("\nFIRST(%c)= { ", c);
+        printf("\n FIRST(%c)= { ", c);
         for (i = 0; result[i] != '\0'; i++)
-            printf("%c ", result[i]); // Display result
+            printf(" %c ", result[i]); // Display result
         printf("}\n");
         printf("press 'y' to continue : ");
-        scanf("%c", &choice);
+        scanf(" %c", &choice);
     } while (choice == 'y' || choice == 'Y');
 }
 /*
@@ -38,11 +35,9 @@ int main()
  *Compute the elements in FIRST(c) and write them
  *in Result Array.
  */
-int FIRST(char *Result, char c)
+void FIRST(char *Result, char c)
 {
-    int
-        i,
-        j, k;
+    int i, j, k;
     char subResult[20];
     int foundEpsilon;
     subResult[0] = '\0';
@@ -51,7 +46,7 @@ int FIRST(char *Result, char c)
     if (!(isupper(c)))
     {
         addToResultSet(Result, c);
-        ;
+        return;
     }
     // If X is non terminal
     // Read each production
@@ -92,8 +87,8 @@ int FIRST(char *Result, char c)
     }
     return;
 }
-/* addToResultSet adds the computed *element
-to result set.
+/* addToResultSet adds the computed
+ *element to result set.
  *This code avoids multiple inclusion of elements
  */
 void addToResultSet(char Result[], char val)

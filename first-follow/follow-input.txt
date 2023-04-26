@@ -1,0 +1,19 @@
+Enter the no.of productions:8
+Enter the productions(epsilon=$):
+E=TD
+D=+TD
+D=$
+T=FS
+S=*FS
+S=$
+F=(E)
+F=a
+Enter the element whose FOLLOW is to be found:E
+FOLLOW(E) = { $ ) }
+Do you want to continue(0/1)?1
+Enter the element whose FOLLOW is to be found:T
+FOLLOW(T) = { + $ ) }
+Do you want to continue(0/1)?1
+Enter the element whose FOLLOW is to be found:D
+FOLLOW(D) = { $ ) }
+Do you want to continue(0/1)?
