@@ -1,0 +1,20 @@
+no.of macros=2
+enter the text filename 
+Mac1.dat
+Mac2.dat
+
+
+Before compiling the program ( macro.c) make a text file named macin.text
+
+
+** macro m1
+** move a,b
+** mend ---
+** macro m2
+** lda b
+** mend ---
+** start 1000
+** lda a
+** call m1
+** call m2
+** add a,b
